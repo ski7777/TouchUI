@@ -1,0 +1,127 @@
+/* QT theme for fischertechnik TXT
+/* http://doc.qt.io/qt-4.8/stylesheet-reference.html */
+/* http://doc.qt.io/qt-4.8/stylesheet-examples.html */
+
+/* widgets by default let the background shine through and use a big white font */
+* { 
+    background-color: rgba(255,255,255,40);
+    font: bold 32px "sans-serif"; 
+    color: white;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    border-width: 0;
+    border-color: grey;
+    margin: 0;
+    min-height: 0;
+    spacing: 0;
+}
+
+#titlebar {
+	  background: qlineargradient( x1:0 y1:0, x2:0 y2:1, stop:0 #448acc, stop:0.2 #5c96cc, stop:1 #0c6acc);
+	  padding: 10;
+}
+
+/* the toplevel has a gradient background look the splash screen */
+#centralwidget {
+     background: qlineargradient( x1:0 y1:0, x2:0 y2:1, stop:0 #448acc, stop:0.2 #5c96cc, stop:1 #0c6acc);
+}
+
+QTabBar {
+    color: #fcce04;
+    font: bold 28px; 
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    color: white;
+}
+
+QTabWidget::tab-bar { alignment: center; }
+
+/*
+QTabWidget, QTabWidget::pane, QStackedWidget {
+   background: none;
+}
+*/
+
+/* qlabel has a transparent background and is in "TXT" orange */
+QLabel {
+    background: none; 
+    color: #fcce04;
+}
+
+/* having transparent aspects in qlineedit makes the line flash on input :-( */
+QLineEdit {
+    background-color: #8EB6DC;
+}
+
+#iconlabel {
+    color: white;
+    font-size: 12px; 
+}
+
+#noicon {
+    background: none;
+}
+
+#iconbut {
+    border-style: none;  
+    background: none;
+}
+
+#iconbut:pressed {
+    background-color: rgba(0, 0, 0, 64);
+}
+
+#icongrid {
+    background: none;
+    padding: 0;
+    border-style: inset;
+}
+
+#smalllabel {
+    font: 24px;
+    color: white;
+}
+
+QPushButton:!enabled {
+    color: lightgrey;
+}
+
+QPushButton {
+    border-style: outset;
+    border-width: 4px;
+    border-radius: 10px;
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 40);
+    border-style: inset;
+    color: lightgrey;
+}
+
+QComboBox {
+    border-style: outset;
+    border-width: 4px;
+    border-radius: 10px;
+}
+
+QComboBox::down-arrow {
+    image: url("/opt/ftc/downicon.png");
+}
+
+QComboBox::drop-down {
+    border-style: none;
+    width: 30px;
+    padding: 6px;
+}
+
+QComboBox QListView {
+    background: #5c96cc; 
+    text-decoration: 0;
+    border-style: outset;
+    border-width: 4px;
+    border-radius: 10px;
+    selection-color: white;
+    selection-background-color: qlineargradient( x1:0 y1:0, x2:0 y2:1, stop:0 #448acc, stop:1 #0c6acc );
+}
