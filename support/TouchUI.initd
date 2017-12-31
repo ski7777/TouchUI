@@ -26,7 +26,7 @@ DISPLAY="Transformed:Rot${SCREEN_ROTATION:-0}"
 
 start() {
         printf "Starting $NAME: "
-        start-stop-daemon --start -c ftc --background --make-pidfile --pidfile $PIDFILE \
+        start-stop-daemon --start -c $USER --background --make-pidfile --pidfile $PIDFILE \
               --exec /usr/bin/env \
                      PYTHONPATH=/opt/ftc \
                      QWS_MOUSE_PROTO=Tslib:/dev/input/event0 \
