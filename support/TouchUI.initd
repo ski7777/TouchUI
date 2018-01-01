@@ -1,10 +1,10 @@
 #!/bin/sh
 
 
-NAME=launcher
+NAME=touchui
 PIDFILE=/var/run/$NAME.pid
 
-if [ -r /etc/default/launcher ]; then
+if [ -r /etc/default/touchui ]; then
   while read line ; do
     case "$line" in
       "SCREEN_ROTATION=0") SCREEN_ROTATION=0 ;;
@@ -13,7 +13,7 @@ if [ -r /etc/default/launcher ]; then
       "SCREEN_ROTATION=270") SCREEN_ROTATION=270 ;;
       *) echo "Ignoring unknown configuration entry: $line" ;;
     esac
-  done < /etc/default/launcher
+  done < /etc/default/touchui
 fi
 
 DISPLAY="Transformed:Rot${SCREEN_ROTATION:-0}"
